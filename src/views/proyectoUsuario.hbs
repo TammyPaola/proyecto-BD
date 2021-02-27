@@ -1,0 +1,36 @@
+ <form action="/inicio" method="POST">
+
+
+ <label>Cuenta a acreditar </label><select name="n_cuenta" id="cuenta"> 
+
+ {{#each datos}}
+ <option value="{{this.id}}">{{this.n_cuenta}}</option>
+ {{/each}}
+ </select>
+ <label>Cuenta a debitar </label><select name="" id="cuenta1"> 
+ {{#each datos}}
+ <option value="{{this.id}}">{{this.n_cuenta}}</option>
+ {{/each}}
+ </select>
+<label>saldo de debito </label><select  id="saldo"> 
+ {{#each datos}}
+ <option value="{{this.saldo}}">{{this.saldo}}</option>
+ {{/each}}
+ </select>
+<label>saldo de credito </label><select id="saldo1"> 
+ {{#each datos}}
+ <option value="{{this.saldo}}">{{this.saldo}}</option>
+ {{/each}}
+ </select>
+<label>saldo a tranferir  </label><input id="monto1" type="text" name="saldo">
+<label> Mensaje </label><input id="Mensaje" type="text" name="descripcion">
+
+
+ <button type= "submit" id= "boton" onclick="matematica.mensaje1()" > transferir sin error</button>
+ </form>
+
+ <form action="/inicio1" method="POST">
+ 
+ <button type="submit" id= "boton" onclick="matematica.mensaje2()" > transferir con  error</button>
+ </form>
+<script src="/js/calculo.js"></script>
